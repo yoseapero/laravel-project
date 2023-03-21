@@ -37,4 +37,5 @@ Route::post('customer',[CustomerController::class,'create']);
 Route::put('/customer/{id}',[CustomerController::class,'update']);
 Route::delete('/customer/{id}',[CustomerController::class,'delete']);
 
-Route::post('/payment/snap_token', [MidtransController::class, 'snapToken']);
+Route::post('/payment/charge-va', [MidtransController::class, 'chargeVa']);
+Route::post('/payment/charge-gopay', [MidtransController::class, 'chargeGopay']);
